@@ -18,6 +18,7 @@
 		27D85D392C59AD7500A363E5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 27D85D382C59AD7500A363E5 /* SnapKit */; };
 		27D85D3B2C59B18200A363E5 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D85D3A2C59B18200A363E5 /* TableViewController.swift */; };
 		27D85D3D2C59B6E800A363E5 /* UISampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D85D3C2C59B6E800A363E5 /* UISampleViewController.swift */; };
+		27D85D3F2C59C20B00A363E5 /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D85D3E2C59C20B00A363E5 /* ObservableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		27D85D352C59AC3E00A363E5 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		27D85D3A2C59B18200A363E5 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		27D85D3C2C59B6E800A363E5 /* UISampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISampleViewController.swift; sourceTree = "<group>"; };
+		27D85D3E2C59C20B00A363E5 /* ObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				27D85D352C59AC3E00A363E5 /* PickerViewController.swift */,
 				27D85D3A2C59B18200A363E5 /* TableViewController.swift */,
 				27D85D3C2C59B6E800A363E5 /* UISampleViewController.swift */,
+				27D85D3E2C59C20B00A363E5 /* ObservableViewController.swift */,
 			);
 			path = "RxSwift-Practice";
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27D85D1B2C59A99600A363E5 /* AppDelegate.swift in Sources */,
+				27D85D3F2C59C20B00A363E5 /* ObservableViewController.swift in Sources */,
 				27D85D362C59AC3E00A363E5 /* PickerViewController.swift in Sources */,
 				27D85D1D2C59A99600A363E5 /* SceneDelegate.swift in Sources */,
 				27D85D3B2C59B18200A363E5 /* TableViewController.swift in Sources */,
