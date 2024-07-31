@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: scene)
         
-        let vc = UINavigationController(rootViewController: AddingNumbersViewController())
+        let vc = UINavigationController(rootViewController: SimpleValidationViewController())
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
     }
