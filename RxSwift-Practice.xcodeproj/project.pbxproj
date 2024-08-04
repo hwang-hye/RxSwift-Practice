@@ -11,6 +11,7 @@
 		2776293F2C5AF4A4003899C5 /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2776293E2C5AF4A4003899C5 /* SimpleValidationViewController.swift */; };
 		277629412C5AF518003899C5 /* SimpleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277629402C5AF518003899C5 /* SimpleTableViewController.swift */; };
 		2777020A2C5E55020065E545 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277702092C5E55020065E545 /* PasswordViewController.swift */; };
+		27A2B0BB2C5FC73A006407BB /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2B0BA2C5FC73A006407BB /* PhoneViewController.swift */; };
 		27D85D1B2C59A99600A363E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D85D1A2C59A99600A363E5 /* AppDelegate.swift */; };
 		27D85D1D2C59A99600A363E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D85D1C2C59A99600A363E5 /* SceneDelegate.swift */; };
 		27D85D242C59A99600A363E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D85D232C59A99600A363E5 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		2776293E2C5AF4A4003899C5 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
 		277629402C5AF518003899C5 /* SimpleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewController.swift; sourceTree = "<group>"; };
 		277702092C5E55020065E545 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		27A2B0BA2C5FC73A006407BB /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		27D85D172C59A99600A363E5 /* RxSwift-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D85D1A2C59A99600A363E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D85D1C2C59A99600A363E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				2776293E2C5AF4A4003899C5 /* SimpleValidationViewController.swift */,
 				277629402C5AF518003899C5 /* SimpleTableViewController.swift */,
 				277702092C5E55020065E545 /* PasswordViewController.swift */,
+				27A2B0BA2C5FC73A006407BB /* PhoneViewController.swift */,
 			);
 			path = "RxSwift-Practice";
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				27D85D1D2C59A99600A363E5 /* SceneDelegate.swift in Sources */,
 				27D85D3B2C59B18200A363E5 /* TableViewController.swift in Sources */,
 				277629412C5AF518003899C5 /* SimpleTableViewController.swift in Sources */,
+				27A2B0BB2C5FC73A006407BB /* PhoneViewController.swift in Sources */,
 				2776293F2C5AF4A4003899C5 /* SimpleValidationViewController.swift in Sources */,
 				27D85D3D2C59B6E800A363E5 /* UISampleViewController.swift in Sources */,
 			);
