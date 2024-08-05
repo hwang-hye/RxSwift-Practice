@@ -68,6 +68,8 @@ class SigninViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     
+    let viewModel = SigninViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -120,75 +122,45 @@ class SigninViewController: UIViewController {
     }
     
     func bind() {
-        let emailValid = emailTextField.rx.text.orEmpty
-            .map { $0.contains("@") }
-            .share(replay: 1)
+        let input = SigninViewModel.Input(
+            emailText: emailTextField.rx.text.orEmpty.asObservable(),
+            nicknameText: nicknameTextField.rx.text.orEmpty.asObservable(),
+            passwordText: passwordTextField.rx.text.orEmpty.asObservable(),
+            tap: loginButton.rx.tap
+        )
         
-        emailValid
-            .map { $0 ? "사용할 수 있는 이메일 입니다" : "이메일 형식을 입력하세요" }
+        let output = viewModel.transform(input: input)
+        
+        output.emailValidation
             .bind(to: emailStatusLabel.rx.text)
             .disposed(by: disposeBag)
         
-        emailValid
-            .map { $0 ? UIColor.black : UIColor.systemRed }
-            .bind(to: emailStatusLabel.rx.textColor)
-            .disposed(by: disposeBag)
-        
-        let nicknameValid = nicknameTextField.rx.text.orEmpty
-            .map { text -> (Bool, String) in
-                if text.count < 2 || text.count > 10 {
-                    return (false, "2~10자 사이의 글자를 입력해주세요")
-                }
-                if text.rangeOfCharacter(from: .decimalDigits) != nil {
-                    return (false, "숫자를 포함할 수 없습니다")
-                }
-                if text.rangeOfCharacter(from: .punctuationCharacters) != nil {
-                    return (false, "특수문자는 사용할 수 없습니다")
-                }
-                return (true, "사용할 수 있는 닉네임입니다")
-            }
-            .share(replay: 1)
-        
-        nicknameValid
-            .map { $0.1 }
+        output.nicknameValidation
             .bind(to: nicknameStatusLabel.rx.text)
             .disposed(by: disposeBag)
         
-        nicknameValid
-            .map { $0.0 ? UIColor.black : UIColor.systemRed }
-            .bind(to: nicknameStatusLabel.rx.textColor)
-            .disposed(by: disposeBag)
-        
-        let passwordValid = passwordTextField.rx.text.orEmpty
-            .map { $0.count >= 8 }
-            .share(replay: 1)
-        
-        passwordValid
-            .map { $0 ? "사용 가능한 비밀번호입니다" : "비밀번호는 8자 이상 입력해주세요" }
+        output.passwordValidation
             .bind(to: passwordStatusLabel.rx.text)
             .disposed(by: disposeBag)
         
-        passwordValid
-            .map { $0 ? UIColor.black : UIColor.systemRed }
-            .bind(to: passwordStatusLabel.rx.textColor)
-            .disposed(by: disposeBag)
-        
-        Observable.combineLatest(emailValid, nicknameValid, passwordValid)
-            .map { $0 && $1.0 && $2 }
+        output.isLoginEnabled
             .bind(to: loginButton.rx.isEnabled)
             .disposed(by: disposeBag)
         
-        Observable.combineLatest(emailValid, nicknameValid, passwordValid)
-            .map { $0 && $1.0 && $2 ? UIColor.systemBlue : UIColor.gray }
+        output.loginButtonColor
             .bind(to: loginButton.rx.backgroundColor)
             .disposed(by: disposeBag)
         
-        loginButton.rx.tap
-            .bind { [weak self] in
-                let alert = UIAlertController(title: "로그인 완료", message: nil, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "확인", style: .default))
-                self?.present(alert, animated: true)
-            }
+        output.showLoginAlert
+            .emit(onNext: { [weak self] in
+                self?.showLoginAlert()
+            })
             .disposed(by: disposeBag)
+    }
+    
+    func showLoginAlert() {
+        let alert = UIAlertController(title: "로그인 완료", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default))
+        present(alert, animated: true)
     }
 }

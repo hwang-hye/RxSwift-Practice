@@ -15,6 +15,7 @@
 		27A2B0BD2C5FCD38006407BB /* BirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2B0BC2C5FCD38006407BB /* BirthdayViewController.swift */; };
 		27A2B0C02C602C7E006407BB /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2B0BF2C602C7E006407BB /* SigninViewController.swift */; };
 		27A2B0C32C6033B4006407BB /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2B0C22C6033B4006407BB /* TodoListViewController.swift */; };
+		27A2B0CD2C618ACD006407BB /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2B0CC2C618ACD006407BB /* SigninViewModel.swift */; };
 		27D85D1B2C59A99600A363E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D85D1A2C59A99600A363E5 /* AppDelegate.swift */; };
 		27D85D1D2C59A99600A363E5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D85D1C2C59A99600A363E5 /* SceneDelegate.swift */; };
 		27D85D242C59A99600A363E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D85D232C59A99600A363E5 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		27A2B0BC2C5FCD38006407BB /* BirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayViewController.swift; sourceTree = "<group>"; };
 		27A2B0BF2C602C7E006407BB /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		27A2B0C22C6033B4006407BB /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
+		27A2B0CC2C618ACD006407BB /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
 		27D85D172C59A99600A363E5 /* RxSwift-Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxSwift-Practice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D85D1A2C59A99600A363E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D85D1C2C59A99600A363E5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				27A2B0BA2C5FC73A006407BB /* PhoneViewController.swift */,
 				27A2B0BC2C5FCD38006407BB /* BirthdayViewController.swift */,
 				27A2B0BF2C602C7E006407BB /* SigninViewController.swift */,
+				27A2B0CC2C618ACD006407BB /* SigninViewModel.swift */,
 			);
 			path = "RxSwift-Practice";
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				277629412C5AF518003899C5 /* SimpleTableViewController.swift in Sources */,
 				27A2B0C02C602C7E006407BB /* SigninViewController.swift in Sources */,
 				27A2B0BB2C5FC73A006407BB /* PhoneViewController.swift in Sources */,
+				27A2B0CD2C618ACD006407BB /* SigninViewModel.swift in Sources */,
 				2776293F2C5AF4A4003899C5 /* SimpleValidationViewController.swift in Sources */,
 				27D85D3D2C59B6E800A363E5 /* UISampleViewController.swift in Sources */,
 			);
